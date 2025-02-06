@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kandidat</title>
+    <style>
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8e1; 
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f57f17; 
+            margin-bottom: 30px;
+        }
+
+        .kandidat {
+            display: inline-block;
+            background-color: #fff;
+            border: 2px solid #f57f17; 
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .kandidat:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9a825; 
+            border-color: #f9a825; 
+        }
+
+        .kandidat img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #fff;
+            border-radius: 15px;
+            padding: 30px;
+            width: 60%;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #f57f17; 
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+        }
+
+        .modal-content img {
+            max-width: 150px;
+            border-radius: 10px;
+        }
+
+        .modal-content video {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pilih Profil Kandidat</h2>
+    <div class="kandidat" onclick="showProfile(0)">
+        <img src="foto1.jpg" alt="Kandidat 1">
+        <p>Kandidat 1</p>
+    </div>
+    <div class="kandidat" onclick="showProfile(1)">
+        <img src="foto2.jpg" alt="Kandidat 2">
+        <p>Kandidat 2</p>
+    </div>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close" onclick="closeModal()">&times;</button>
+            <h3 id="nama"></h3>
+            <img id="foto" src="" alt="Foto Kandidat">
+            <p><strong>Jurusan:</strong> <span id="jurusan"></span></p>
+            <p><strong>Visi & Misi:</strong> <span id="visiMisi"></span></p>
+            <video id="video" controls></video>
+        </div>
+    </div>
+
+    <script>
+        const kandidatData = [
+            { nama: "Kandidat 1", jurusan: "Teknik Informatika", visiMisi: "Menjadi pemimpin yang inspiratif", foto: "foto1.jpg", video: "video1.mp4" },
+            { nama: "Kandidat 2", jurusan: "Sistem Informasi", visiMisi: "Mewujudkan inovasi untuk mahasiswa", foto: "foto2.jpg", video: "video2.mp4" }
+        ];
+        
+        function showProfile(index) {
+            document.getElementById("nama").textContent = kandidatData[index].nama;
+            document.getElementById("jurusan").textContent = kandidatData[index].jurusan;
+            document.getElementById("visiMisi").textContent = kandidatData[index].visiMisi;
+            document.getElementById("foto").src = kandidatData[index].foto;
+            document.getElementById("video").src = kandidatData[index].video;
+            document.getElementById("modal").style.display = "flex";
+        }
+        
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>

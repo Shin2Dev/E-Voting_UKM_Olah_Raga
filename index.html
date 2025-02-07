@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Voting Pemilihan Ketua Umum UKM Olahraga</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="loginSection" class="section">
         <header>
@@ -26,64 +29,82 @@
         <header>
             <h1>E-Voting Pemilihan Ketua Umum UKM Olahraga</h1>
         </header>
-        
+
         <nav>
             <a href="index.html" class="active">Beranda</a>
             <a href="profile.html">Profil Kandidat</a>
-            <a href="hasil-voting.html">Hasil Voting</a>
+            <a href="hasilvoting.html">Hasil Voting</a>
         </nav>
-    
-    
-            <main>
-                <section id="home">
-                    <h2>Selamat Datang!</h2>
-                    <p>Ini adalah platform e-voting untuk pemilihan ketua umum UKM Olahraga. Silakan pilih calon yang Anda dukung.</p>
-                </section>
-    
-                <section id="candidates">
-                    <h2>Calon Ketua Umum</h2>
-                    <a href="profile.html?id=1">Lihat Profil Lengkap Kandidat</a>
-                    <div class="candidate">
-                        <h3>Kandidat 1: ABC</h3>
-                        <p>Visi: Meningkatkan prestasi olahraga UKM.</p>
-                        <p>Misi: Mengadakan lebih banyak kompetisi dan pelatihan.</p>
-                    </div>
-                    <div class="candidate">
-                        <h3>Kandidat 2: DEF</h3>
-                        <p>Visi: Membangun komunitas olahraga yang solid.</p>
-                        <p>Misi: Memperluas jangkauan olahraga di kalangan mahasiswa.</p>
-                    </div>
-                </section>
-    
-                <section id="vote">
-                    <h2>Voting</h2>
-                    <form action="submit_vote.php" method="POST">
-                        <label for="candidate">Pilih Calon:</label>
-                        <select id="candidate" name="candidate" required>
-                            <option value="">--Pilih--</option>
-                            <option value="ABC">ABC</option>
-                            <option value="DEF">DEF</option>
-                        </select>
-                        <button type="submit" class="btn">Kirim Suara</button>
-                    </form>
-                </section>
-    
-                <section id="results">
-                    <h2>Hasil Pemilihan</h2>
-                    <p>Hasil pemilihan akan ditampilkan di sini setelah voting selesai.</p>
-                </section>
-    
-                <section id="contact">
-                    <h2>Kontak</h2>
-                    <p>Jika Anda memiliki pertanyaan, silakan hubungi kami di <a href="mailto:info@ukmolahraga.com">info@ukmolahraga.com</a>.</p>
-                </section>
-            </main>
-    
-            <footer>
-                <p>&copy; 2025 UKM Olahraga.</p>
-            </footer>
-        </div>
-    
-        <script src="script.js"></script>
-    </body>
-    </html>
+
+        <main>
+            <section id="home">
+                <h2>Selamat Datang!</h2>
+                <p>Ini adalah platform e-voting untuk pemilihan ketua umum UKM Olahraga. Silakan pilih calon yang Anda
+                    dukung.</p>
+            </section>
+
+            <section id="candidates">
+                <h2>Calon Ketua Umum</h2>
+                <a href="profile.html?id=1">Lihat Profil Lengkap Kandidat</a>
+
+                <div class="candidate">
+                    <h3>Kandidat 1: ABC</h3>
+                    <p>Visi: Meningkatkan prestasi olahraga UKM.</p>
+                    <p>Misi: Mengadakan lebih banyak kompetisi dan pelatihan.</p>
+                </div>
+
+                <div class="candidate">
+                    <h3>Kandidat 2: DEF</h3>
+                    <p>Visi: Membangun komunitas olahraga yang solid.</p>
+                    <p>Misi: Memperluas jangkauan olahraga di kalangan mahasiswa.</p>
+                </div>
+
+                <div class="candidate">
+                    <h3>Kandidat 3: GHI</h3>
+                    <p>Visi: Menjadikan UKM lebih inovatif.</p>
+                    <p>Misi: Mengadakan workshop dan kolaborasi antar UKM.</p>
+                </div>
+
+                <div class="candidate">
+                    <h3>Kandidat 4: JKL</h3>
+                    <p>Visi: Meningkatkan kesejahteraan anggota UKM.</p>
+                    <p>Misi: Memperkuat solidaritas dan kesejahteraan mahasiswa.</p>
+                </div>
+            </section>
+
+            <section id="vote">
+                <h2>Voting</h2>
+                <form action="submit_vote.php" method="POST">
+                    <label for="candidate">Pilih Calon:</label>
+                    <select id="candidate" name="candidate" required>
+                        <option value="">--Pilih--</option>
+                        <option value="ABC">ABC</option>
+                        <option value="DEF">DEF</option>
+                        <option value="GHI">GHI</option>
+                        <option value="JKL">JKL</option>
+                    </select>
+                    <button type="submit" class="btn">Kirim Suara</button>
+                </form>
+            </section>
+
+            <section id="results">
+                <h2>Hasil Pemilihan</h2>
+                <p>Hasil pemilihan akan ditampilkan di sini setelah voting selesai.</p>
+            </section>
+
+            <section id="contact">
+                <h2>Kontak</h2>
+                <p>Jika Anda memiliki pertanyaan, silakan hubungi kami di <a
+                        href="mailto:info@ukmolahraga.com">info@ukmolahraga.com</a>.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 UKM Olahraga.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
